@@ -22,6 +22,13 @@ class docker-install {
   }
 
   exec { 'extract_editor_script':
-    command => "/bin/bash -c '/etc/server-config/install.sh'",
+    command => "/bin/bash -c '/etc/puppet/modules/docker-install/files/install.sh'",
+    unless => "/usr/bin/docker --version"
+  }
+
+  service { "docker.service":
+    provider => systemd,
+    ensure => running,
+    enable => true,
   }
 }
