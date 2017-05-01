@@ -5,5 +5,6 @@
       "license": "Apache-2.0",
       "summary": "A module for a thing",
       "source": "https://github.com/examplecorp/examplecorp-mymodule",
-      "data_provider": "hiera"
-    }
+      "data_provider": "hiera",
+      "dependencies": []
+}
